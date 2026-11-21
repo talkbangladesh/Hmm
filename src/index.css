@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --atlas-blue: #1d4ed8;
+    --atlas-blue-hover: #1e40af;
+    --atlas-navy: #0f172a;
+    --atlas-body: #334155;
+    --atlas-muted: #64748b;
+    --atlas-bg: #ffffff;
+    --atlas-soft: #f7f9fc;
+    --atlas-border: #e3e8ef;
+  }
+
+  html {
+    font-family: 'Inter', 'Noto Sans Bengali', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    font-variant-ligatures: normal;
+    color: #0f172a;
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Inter', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono-tabular,
+  .tabular-nums {
+    font-family: 'Inter', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Proper Bangla conjunct rendering: Noto Sans Bengali, 1.75 leading, zero letter-spacing, normal Indic shaping */
+.bangla-text {
+  font-family: 'Noto Sans Bengali', 'Inter', system-ui, sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  font-variant-ligatures: normal;
+  font-feature-settings: normal;
+}
+
+/* Hide scrollbars cleanly for horizontal tab strip */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+  }
+}

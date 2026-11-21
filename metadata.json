@@ -1,0 +1,6 @@
+{
+  "name": "Atlas AI Education",
+  "description": "Structured, accessible, and responsible AI education by Atlas AI Institute. Explore Foundation, Applied AI, Professional Development, Specialized Programmes, Resources, and Institutional Training.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
